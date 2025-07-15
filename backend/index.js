@@ -12,11 +12,17 @@ const server=http.createServer(app);
 
 const url=process.env.DATABASE_URL;
 
-mongoose.connect(url,{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
-    console.log("Connected to database");
-}).catch((error)=>{
-    console.log(error);
+mongoose.connect(url, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
 })
+.then(() => {
+    console.log("Connected to MongoDB successfully");
+})
+.catch((error) => {
+    console.error("MongoDB connection failed:", error.message);
+});
+
 
 module.exports={app,server};
 
