@@ -15,7 +15,7 @@ const getUpdatedRanking=async()=>{
             await users[i].save();
         }
 
-        return await User.find().sort({totalPonints:-1});
+        return await User.find().sort({totalPoints:-1});
 
     }catch(error){
         console.log(error);

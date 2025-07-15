@@ -28,7 +28,7 @@ const Leaderboard = () => {
   return (
     <div className="mt-6 overflow-x-auto">
 
-      <Hero users={users} />
+      <Hero users={[...users].sort((a, b) => b.totalPoints - a.totalPoints)}/>
 
       <h2 className="text-xl font-bold mb-3 flex items-center gap-2">
         <Crown className="w-5 h-5 text-amber-400" />
