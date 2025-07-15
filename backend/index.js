@@ -12,7 +12,7 @@ const server=http.createServer(app);
 
 const url=process.env.DATABASE_URL;
 
-mongoose.connect(url).then(()=>{
+mongoose.connect(url,{useNewUrlParser:true,useUnifiedTopology:true}).then(()=>{
     console.log("Connected to database");
 }).catch((error)=>{
     console.log(error);
