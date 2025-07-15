@@ -1,9 +1,9 @@
-const {server}=require('./index');
-const socket=require('socket.io');
-const User=require('./models/UserModel');
-const History=require('./models/HistoryModel');
 const dotenv=require('dotenv');
 dotenv.config();
+const socket=require('socket.io');
+const {server}=require('./index');
+const User=require('./models/UserModel');
+const History=require('./models/HistoryModel');
 
 const getUpdatedRanking=async()=>{
 

@@ -1,16 +1,18 @@
-const express=require('express');
-const http=require('http');
 const dotenv=require('dotenv');
-const mongoose=require('mongoose');
 const cors=require('cors');
+dotenv.config();
 
+const http=require('http');
+const mongoose=require('mongoose');
+const express=require('express');
 const app=express();
 app.use(express.json());
 app.use(cors());
-dotenv.config();
 const server=http.createServer(app);
 
 const url=process.env.DATABASE_URL;
+
+console.log(url);
 
 mongoose.connect(url, {
     useNewUrlParser: true,
