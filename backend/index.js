@@ -11,7 +11,6 @@ app.use(cors());
 const server=http.createServer(app);
 
 const url=process.env.DATABASE_URL;
-console.log(url);
 
 mongoose.connect(url, {
     useNewUrlParser: true,
