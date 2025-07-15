@@ -8,7 +8,7 @@ const History=require('./models/HistoryModel');
 const getUpdatedRanking=async()=>{
 
     try{
-        const users=await User.find().sort({totalPonints:-1});
+        const users=await User.find().sort({totalPoints:-1});
     
         for(let i=0;i<users.length;i++){
             users[i].rank=i+1;
