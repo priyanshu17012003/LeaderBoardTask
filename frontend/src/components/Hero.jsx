@@ -1,5 +1,5 @@
 import React from "react";
-import { Medal, Star } from "lucide-react";
+import { Star } from "lucide-react";
 
 const rankColors = ["text-yellow-400", "text-gray-400", "text-orange-500"];
 const bgColors = ["bg-yellow-100", "bg-gray-100", "bg-orange-100"];

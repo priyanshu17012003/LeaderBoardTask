@@ -3,7 +3,7 @@ import { io } from "socket.io-client";
 import { Crown,Gift } from "lucide-react";
 import Hero from "./Hero";
 
-const socket = io("http://localhost:5000");
+const socket = io(import.meta.env.VITE_SOCKET_URL);
 
 const Leaderboard = () => {
   const [users, setUsers] = useState([]);
