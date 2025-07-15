@@ -2,6 +2,8 @@ const {server}=require('./index');
 const socket=require('socket.io');
 const User=require('./models/UserModel');
 const History=require('./models/HistoryModel');
+const dotenv=require('dotenv');
+dotenv.config();
 
 const getUpdatedRanking=async()=>{
 
@@ -136,4 +138,6 @@ io.on("connection",(socket)=>{
     })
 })
 
-server.listen(5000,()=>console.log("Server started on port 5000"));
+const port=process.env.PORT || 5000;
+
+server.listen(port,()=>console.log("Server started on port "+port));
