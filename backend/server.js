@@ -27,9 +27,11 @@ const generatePoints=()=>{
     return Math.floor(Math.random() * 10) + 1;
 }
 
+const FRONTEND_URL=process.env.FRONTEND_URL;
+
 const io=socket(server,{
     cors:{
-        origin:"*"
+        origin:[FRONTEND_URL]
     }
 })
 
