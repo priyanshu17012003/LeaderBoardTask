@@ -10,7 +10,7 @@ app.use(express.json());
 app.use(cors());
 const server=http.createServer(app);
 
-const url=process.env.DATABASE_URL;
+const url=process.env.DATABASE_URL||"mongodb+srv://priyanshusanki123:8HNdiqcgsfkyD9RO@cluster0.xwsnn8e.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0";
 
 console.log(url);
 
